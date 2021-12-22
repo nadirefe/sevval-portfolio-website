@@ -7,7 +7,11 @@ import cn from 'classnames';
 import Container from '../components/Container';
 
 const Home = () => {
-  return <Container>hello</Container>;
+  return (
+    <Container>
+      <h1>hello</h1>
+    </Container>
+  );
 };
 
 export default Home;
