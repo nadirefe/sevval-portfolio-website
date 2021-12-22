@@ -10,7 +10,16 @@ const Post = ({ posts }) => {
     );
   });
 
-  return <div>{projects}</div>;
+  return (
+    <>
+      {projects}
+      <div>
+        <NextLink href={`/portfolio/subpage2/foo`}>
+          <a className="">foo</a>
+        </NextLink>
+      </div>
+    </>
+  );
 };
 
 export default Post;

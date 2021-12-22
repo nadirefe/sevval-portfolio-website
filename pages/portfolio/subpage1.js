@@ -1,12 +1,12 @@
 import React from 'react';
-import Container from '../../../components/Container';
-import fs from 'fs';
-import path from 'path';
-import matter from 'gray-matter';
-import Post from '../../../components/Post';
+import Container from '../../components/Container';
+//import fs from 'fs';
+//import path from 'path';
+//import matter from 'gray-matter';
+import Post from '../../components/Post';
+import { getAllFilesFrontMatter } from '../../lib/mdx';
 
 const subpage1 = ({ posts }) => {
-  console.log(posts);
   return (
     <Container title="Portfolio">
       <div className="flex flex-col">
@@ -17,6 +17,12 @@ const subpage1 = ({ posts }) => {
 };
 
 export async function getStaticProps() {
+  const posts = await getAllFilesFrontMatter('posts');
+
+  return { props: { posts } };
+}
+
+/* export async function getStaticProps() {
   const POSTS_PATH = path.join(process.cwd(), 'data', 'posts');
   // Get files from the posts dir
   const files = fs.readdirSync(path.join(POSTS_PATH));
@@ -43,6 +49,6 @@ export async function getStaticProps() {
       posts: posts,
     },
   };
-}
+} */
 
 export default subpage1;

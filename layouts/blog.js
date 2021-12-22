@@ -9,7 +9,7 @@ export default function BlogLayout({ children, frontMatter }) {
   return (
     <div>
       <Head>
-        <title>${slug} - Blog - Benjamin Carlson</title>
+        <title>{slug}</title>
       </Head>
       <p>{frontMatter.title}</p>
       {/*

@@ -5,7 +5,7 @@ import NextLink from 'next/link';
 const subpage1 = () => {
   return (
     <Container title="Portfolio">
-      <NextLink href="/portfolio/subpage1/project1">
+      <NextLink href="/portfolio/subpage2/test">
         <a className="">Project 1</a>
       </NextLink>
     </Container>
