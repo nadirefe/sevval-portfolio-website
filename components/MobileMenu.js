@@ -34,7 +34,7 @@ const MobileMenu = () => {
   return (
     <>
       <button
-        className={cn(styles.burger, 'visible md:hidden')}
+        className={cn(styles.burger, 'visible lg:hidden')}
         aria-label="Toggle menu"
         type="button"
         onClick={toggleMenu}

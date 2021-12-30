@@ -8,10 +8,19 @@ module.exports = {
         orange: colors.orange,
         beige: '#f1e9e5',
       },
+      fontFamily: {
+        //Reconeta: ['Reconeta'],
+        sans: ['Recoleta', 'sans-serif'],
+        //serif: ['Recolata', 'serif'],
+      },
       // that is animation class
       animation: {
         fade: 'fadeIn 500ms ease',
       },
+      backgroundImage: (theme) => ({
+        collage: "url('../public/images/collage.png')",
+        idcol: "url('../public/images/idcol.png')",
+      }),
       keyframes: (theme) => ({
         fadeIn: {
           '0%': { opacity: 0 },
@@ -24,4 +33,7 @@ module.exports = {
     extend: {},
   },
   plugins: [],
+  /* corePlugins: {
+    preflight: false,
+  }, */
 };

@@ -8,8 +8,8 @@ import Container from '../components/Container';
 
 const Home = () => {
   return (
-    <Container>
-      <h1>hello</h1>
+    <Container isHome={true}>
+      <div className="bg-idcol w-full h-screen bg-cover bg-center bg-no-repeat bg-top"></div>
     </Container>
   );
 };

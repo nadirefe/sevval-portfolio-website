@@ -1,0 +1,118 @@
+---
+title: 'Computer Vision - Optical Flow'
+publishedAt: '2020-03-22'
+summary: 'This is the summary of our blog post! This is the summary of our blog post! This is the summary of our blog post!'
+---
+
+<h2 style={{ color: '#fdba74' }}>COMPUTER VISION </h2>
+
+## **Optical Flow**
+
+This academic lab project calculates the optical flow throughout a video.
+
+Optical flow is defined as the visible motion of the individual pixels on the image plane where the product of the projection of 3D motion on the 2D plane of the image. Optical flow is a fundamental term that is used in one way or another in most video processing algorithms.
+
+Optical flow methods are based on the estimation of the motion estimates of the image intensity over time in the video. The use of optical flow is specifically in the field of object detection. It can be used for measuring the velocity of the object and the position of the object in the next frame. Also, it falls within the kernel tracking category of object tracking and is referred to as the KLT algorithm. When evaluating the optical flow, the surface being imaged initially presumed that it is flat in order to prevent differences in brightness due to shading effects.
+
+In addition, the brightness at a point in the image and the reflectance of the surface at the corresponding point on the object are proportional. Also, reflectance is assumed like this: it varies smoothly and has no spatial discontinuities.
+
+When it comes to implementation, the image has smoothened and then filtered it with a box filter. After that, spatial gradient is calculated by using “convolution” built in function. With that part, temporal gradient is measured with subtracting the current image from the previous image.
+
+<img
+  src="/images/posts/k102.png"
+  alt="k102"
+  style={{ width: '400px', display: 'inline' }}
+/>
+<img
+  src="/images/posts/k102.png"
+  alt="k1022"
+  style={{ width: '400px', display: 'inline' }}
+/>
+<img
+  src="/images/posts/k102.png"
+  alt="k103"
+  style={{ width: '400px', display: 'inline' }}
+/>
+
+## **Appendix**
+
+**_Main Function_**
+
+```c
+clear all; close all; clc;
+% Load the files given as Seq variable
+load('traffic.mat');
+load('rubic.mat');
+Seq=traffic;
+[row,col,num]=size(Seq);
+% Define k and Threshold
+k=30;
+Threshold=2*10^6;
+for j=2:1:num
+ImPrev = Seq(:,:,j-1);
+ImCurr = Seq(:,:,j);
+lab6OF(ImPrev,ImCurr,k,Threshold);
+pause(0.1);
+end
+```
+
+**_Function Code_**
+
+```c
+function lab6OF(ImPrev,ImCurr,k,Threshold)
+%smooth the input images
+ImPrev_ = imboxfilt(double(ImPrev),3);
+ImCurr_ = imboxfilt(double(ImCurr),3);
+%calculate spatial gradients
+xfilt=[-1 0 1;
+-1 0 1;
+-1 0 1];
+yfilt=[-1 -1 -1;
+0 0 0;
+1 1 1];
+Ix=conv2(ImCurr_,xfilt);
+Iy=conv2(ImCurr_,yfilt);
+%calculate temporal gradient(It)
+It =double(ImPrev_) - double(ImCurr_) ;
+[ydim,xdim] = size(ImCurr);
+Vx = zeros(ydim,xdim);
+Vy = zeros(ydim,xdim);
+G = zeros(2,2);
+b = zeros(2,1);
+cx = k+1;
+for x=k+1:k:xdim-k-1
+cy=k+1;
+for y=k+1:k:ydim-k-1
+% Calculate the elements of G and b
+wix = Ix(y-k:y+k, x-k:x+k);
+wiy = Iy(y-k:y+k, x-k:x+k);
+wib = It(y-k:y+k, x-k:x+k);
+h1 = sum(sum(wix.^2));
+h2 = sum(sum(wix.*wiy));
+h3 = h2;
+h4 = sum(sum(wiy.^2));
+h5 = sum(sum(wix.*wib));
+h6 = sum(sum(wiy.*wib));
+G = [h1,h2;h3,h4];
+b = [h5;h6];
+e = eig(G);
+if (min(e) < Threshold)
+Vx(cy,cx)=0;
+Vy(cy,cx)=0;
+else
+% Calculate u
+u = -inv(G).*b ;
+Vx(cy,cx)=u(1);
+Vy(cy,cx)=u(2);
+end
+cy=cy+k;
+end
+cx=cx+k;
+end
+cla reset;
+imagesc(ImPrev_); hold on;
+[xramp,yramp] = meshgrid(1:1:xdim,1:1:ydim);
+quiver(xramp,yramp,Vx,Vy,10,'r');
+colormap gray;
+end
+```

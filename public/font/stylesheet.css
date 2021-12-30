@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'Recoleta';
+  src: url('Recoleta-Regular.woff2') format('woff2');
+  /* url('Recoleta-Medium.woff') format('woff'); */
+  /* font-weight: 200; */
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
