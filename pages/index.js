@@ -5,13 +5,14 @@ const Home = () => {
     <div>
       <Container isHome={true}>
         {/* <div className="bg-idcol w-full h-screen bg-cover bg-center bg-no-repeat bg-top" /> */}
+        hello
         <div className='relative'>
-          <img className='absolute collage' src='/images/idcollage.png' />
-          <img className='absolute purple-cloud-bottom' src='/images/purple-cloud-bottom.png' />
-          <img className='absolute purple-cloud-up' src='/images/purple-cloud-up.png' />
-          <img className='absolute pink-cloud-bottom' src='/images/pink-cloud-bottom.png' />
-          <img className='absolute pink-cloud-up' src='/images/pink-cloud-up.png' />
-          <img className='absolute green-cloud' src='/images/green-cloud.png' />
+          <img className='absolute collage' src='/images/idcollage.jpeg' />
+          <img className='absolute purple-cloud-bottom' src='/images/purple-cloud-bottom.jpeg' />
+          <img className='absolute purple-cloud-up' src='/images/purple-cloud-up.jpeg' />
+          <img className='absolute pink-cloud-bottom' src='/images/pink-cloud-bottom.jpeg' />
+          <img className='absolute pink-cloud-up' src='/images/pink-cloud-up.jpeg' />
+          <img className='absolute green-cloud' src='/images/green-cloud.jpeg' />
         </div>
       </Container>
       {/* <div className="relative">
