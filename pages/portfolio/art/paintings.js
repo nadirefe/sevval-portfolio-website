@@ -8,22 +8,6 @@ const Paintings = () => {
   const photos = Array.apply(null, Array(4)).map((i, index) => {
     return (
       <>
-        {/* <div className="gallery-item" onClick={() => setIsOpen(true)}>
-          <img src={`/images/photography/IMG_${index}.JPEG`} />
-          {isOpen && (
-            <ModalGateway>
-              {isOpen ? (
-                <Modal onClose={() => setIsOpen(!isOpen)}>
-                  <Carousel
-                    views={[
-                      { source: `/images/photography/IMG_${index}.JPEG` },
-                    ]}
-                  />
-                </Modal>
-              ) : null}
-            </ModalGateway>
-          )}
-        </div> */}
         <SketchItem imageSrc={`/images/art/IMG_${index}.png`} />
       </>
     );

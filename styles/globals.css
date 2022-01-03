@@ -22,6 +22,22 @@ body {
     opacity: 1;
   }
 }
+.download-link{
+  color:#fdba74;
+  text-decoration: underline;
+}
+
+.download-link:hover {
+  text-decoration: none;
+}
+
+.collage {
+  animation-name: fadeIn;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
 
 .purple-cloud {
   animation-name: fadeIn;
@@ -54,9 +70,9 @@ body {
   transition: background-color 300ms linear, color 200ms linear;
 }
 
-.post-text:hover {
+/* .post-text:hover {
   animation: move 5s linear infinite;
-}
+} */
 
 @keyframes move {
   to {
@@ -64,10 +80,6 @@ body {
   }
 }
 
-/* .gallery img {
-  max-width: 100%;
-  height: auto;
-} */
 
 .gallery {
   margin: 0 0.65rem;
@@ -85,24 +97,6 @@ body {
   object-fit: cover;
 }
 
-/*****************************************************/
-/* .gallery-item {
-  width: 100%;
-  height: auto;
-  margin: 0.5rem;
-}
-
-.image {
-  object-fit: contain;
-  width: 100% !important;
-  position: relative !important;
-  height: unset !important;
-}
-
-.gallery-item > div {
-  position: unset !important;
-} */
-/*****************************************************/
 @media (min-width: 640px) {
   .gallery {
     display: grid;
@@ -138,7 +132,6 @@ body {
 
   .gallery-item:nth-child(2) {
     grid-column: 2/3;
-    /*     grid-column: span 2; */
     grid-row: span 2;
   }
 }
@@ -192,30 +185,6 @@ a {
   box-sizing: border-box;
 }
 
-ul {
-  list-style-type: none;
-  /* padding: 0;
-  margin: 5px 0 0 0; */
-  /*  border-width: 1px;
-  border-color: black; */
-}
-
-/* @font-face {
-  font-family: 'Recoleta';
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: optional;
-  src: url(/fonts/Recoleta-Medium.woff2) format('woff2');
-} */
-
-/* @font-face {
-  font-family: 'Recoleta';
-  src: url('/fonts/Recoleta-Medium.woff2') format('woff2'),
-    url('/fonts/Recoleta-Medium.woff') format('woff');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-} */
 
 code[class*='language-'],
 pre[class*='language-'] {

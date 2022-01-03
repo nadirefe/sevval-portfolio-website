@@ -45,7 +45,7 @@ const MobileMenu = () => {
         />
         <CrossIcon
           test="true"
-          //className={`${!isMenuOpen ? styles.test : ''}`}
+        //className={`${!isMenuOpen ? styles.test : ''}`}
         />
       </button>
 
@@ -69,7 +69,7 @@ const MobileMenu = () => {
             className="border-b border-gray-300 text-gray-900 text-sm font-semibold"
             style={{ transitionDelay: '175ms' }}
           >
-            <Link href="/guestbook">
+            <Link href="/about">
               <a className="flex w-auto pb-4">About</a>
             </Link>
           </li>
@@ -77,16 +77,58 @@ const MobileMenu = () => {
             className="border-b border-gray-300 text-gray-900 text-sm font-semibold"
             style={{ transitionDelay: '200ms' }}
           >
-            <Link href="/dashboard">
-              <a className="flex w-auto pb-4">Portolio</a>
+            <Link href="/portfolio/engineering">
+              <a className="flex w-auto pb-4">Portolio/Engineering</a>
+            </Link>
+          </li>
+          <li
+            className="border-b border-gray-300 text-gray-900 text-sm font-semibold"
+            style={{ transitionDelay: '200ms' }}
+          >
+
+            <Link href="/portfolio/motion-graphics">
+              <a className="flex w-auto pb-4">Portolio/Motion Graphics</a>
+            </Link>
+          </li>
+          <li
+            className="border-b border-gray-300 text-gray-900 text-sm font-semibold"
+            style={{ transitionDelay: '200ms' }}
+          >
+
+            <Link href="/portfolio/3d">
+              <a className="flex w-auto pb-4">Portolio/3D</a>
+            </Link>
+          </li>
+          <li
+            className="border-b border-gray-300 text-gray-900 text-sm font-semibold"
+            style={{ transitionDelay: '200ms' }}
+          >
+            <Link href="/portfolio/sketch">
+              <a className="flex w-auto pb-4">Portolio/Sketch</a>
+            </Link>
+          </li>
+          <li
+            className="border-b border-gray-300 text-gray-900 text-sm font-semibold"
+            style={{ transitionDelay: '200ms' }}
+          >
+            <Link href="/portfolio/art">
+              <a className="flex w-auto pb-4">Portolio/Art</a>
             </Link>
           </li>
           <li
             className="border-b border-gray-300 text-gray-900 text-sm font-semibold"
             style={{ transitionDelay: '250ms' }}
           >
-            <Link href="/blog">
+            <Link href="/photography">
               <a className="flex w-auto pb-4">Photography</a>
+            </Link>
+          </li>
+          <li
+            className="border-b border-gray-300 text-gray-900 text-sm font-semibold"
+            style={{ transitionDelay: '250ms' }}
+          >
+            <Link href="/films">
+              <a className="flex w-auto pb-4">Film Readings</a>
             </Link>
           </li>
         </ul>

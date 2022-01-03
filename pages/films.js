@@ -4,7 +4,7 @@ import Post from '../components/Post';
 import { getAllFilesFrontMatter } from '../lib/mdx';
 
 const subpage1 = ({ films }) => {
-  console.log(films);
+
   return (
     <Container title="Portfolio">
       <div className="flex flex-col">
