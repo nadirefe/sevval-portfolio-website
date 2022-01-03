@@ -32,6 +32,7 @@ body {
 }
 
 .collage {
+  background-image: url('../public/images/idcollage.png');
   animation-name: fadeIn;
   animation-iteration-count: 1;
   animation-timing-function: ease-in-out;
@@ -39,7 +40,16 @@ body {
   animation-fill-mode: forwards;
 }
 
-.purple-cloud {
+.purple-cloud-bottom {
+  background-image: url('../public/images/purple-cloud-bottom.png');
+  animation-name: fadeIn;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+.purple-cloud-up {
+  background-image: url('../public/images/purple-cloud-up.png');
   animation-name: fadeIn;
   animation-iteration-count: 1;
   animation-timing-function: ease-in-out;
@@ -47,6 +57,7 @@ body {
   animation-fill-mode: forwards;
 }
 .green-cloud {
+  background-image: url('../public/images/green-cloud.png');
   animation-name: fadeIn;
   animation-iteration-count: 1;
   animation-timing-function: ease-in-out;
@@ -54,7 +65,16 @@ body {
   animation-fill-mode: forwards;
 }
 
-.pink-cloud {
+.pink-cloud-bottom {
+  background-image: url('../public/images/pink-cloud-bottom.png');
+  animation-name: fadeIn;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-duration: 2.5s;
+  animation-fill-mode: forwards;
+}
+.pink-cloud-up {
+  background-image: url('../public/images/pink-cloud-up.png');
   animation-name: fadeIn;
   animation-iteration-count: 1;
   animation-timing-function: ease-in-out;

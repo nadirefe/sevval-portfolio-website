@@ -19,12 +19,12 @@ module.exports = {
       },
       backgroundImage: (theme) => ({
         /* collage: "url('../public/images/collage.png')", */
-        collage: "url('../public/images/idcollage.png')",
+        /* collage: "url('../public/images/idcollage.png')",
         greenCloud: "url('../public/images/green-cloud.png')",
         pinkCloudBottom: "url('../public/images/pink-cloud-bottom.png')",
         pinkCloudUp: "url('../public/images/pink-cloud-up.png')",
         purpleCloudBottom: "url('../public/images/purple-cloud-bottom.png')",
-        purpleCloudUp: "url('../public/images/purple-cloud-up.png')",
+        purpleCloudUp: "url('../public/images/purple-cloud-up.png')", */
       }),
       keyframes: (theme) => ({
         fadeIn: {
