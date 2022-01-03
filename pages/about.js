@@ -10,7 +10,7 @@ const About = () => {
           <div>
             <div className='relative top-12'>
               <h1>
-                Hello!!!!!!!
+                Hello!
         </h1>
               <p>
                 I am a recent Electronics Engineering graduate.
