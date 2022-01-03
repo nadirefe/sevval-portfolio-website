@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import Container from '../components/Container';
-import Image from 'next/image';
 import PhotoModal from '../components/photoModal.js';
 
-const photography = () => {
+const Photography = () => {
   const photos2 = Array.apply(null, Array(34)).map((i, index) => {
     return (
       <>
@@ -21,4 +20,4 @@ const photography = () => {
   );
 };
 
-export default photography;
+export default Photography;

@@ -1,7 +1,7 @@
 import React from 'react';
 import Container from '../components/Container';
 
-const about = () => {
+const About = () => {
   return (
     <>
       <Container title="about">
@@ -38,4 +38,4 @@ const about = () => {
   )
 };
 
-export default about;
+export default About;

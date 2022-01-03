@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
 
-const sketchItem = ({ imageSrc }) => {
+const SketchItem = ({ imageSrc }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -18,4 +18,4 @@ const sketchItem = ({ imageSrc }) => {
   );
 };
 
-export default sketchItem;
+export default SketchItem;

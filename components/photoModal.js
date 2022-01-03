@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
 
-const photoModal = ({ imageSrc }) => {
+const PhotoModal = ({ imageSrc }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -19,4 +19,4 @@ const photoModal = ({ imageSrc }) => {
   );
 };
 
-export default photoModal;
+export default PhotoModal;
