@@ -6,7 +6,7 @@ const PhotoModal = ({ imageSrc }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="gallery-item" onClick={() => setIsOpen(!isOpen)}>
+    <div className="gallery-item cursor-pointer" onClick={() => setIsOpen(!isOpen)}>
       <img src={imageSrc} />
 
       {isOpen && (
