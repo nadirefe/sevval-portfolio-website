@@ -14,7 +14,7 @@ const ThreeD = () => {
     <Container title="Portfolio">
       <div className="grid grid-cols-3 gap-3">{photos}
         <div className="relative w-full pt-7/12">
-          <iframe width="560" height="280" src="https://www.youtube.com/embed/av-Kjtizmk4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe width="560" height="280" src="https://www.youtube.com/embed/av-Kjtizmk4" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
         </div>
       </div>
     </Container>
