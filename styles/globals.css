@@ -32,7 +32,7 @@ body {
 }
 
 .collage {
-  background-image: url('../public/images/idcollage.jpeg');
+  background-image: url('/images/idcollage.jpeg');
   animation-name: fadeIn;
   animation-iteration-count: 1;
   animation-timing-function: ease-in-out;
