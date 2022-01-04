@@ -22,8 +22,8 @@ body {
     opacity: 1;
   }
 }
-.download-link{
-  color:#fdba74;
+.download-link {
+  color: #fdba74;
   text-decoration: underline;
 }
 
@@ -99,7 +99,6 @@ body {
     transform: translateX(-100%);
   }
 }
-
 
 .gallery {
   margin: 0 0.65rem;
@@ -204,7 +203,6 @@ a {
 * {
   box-sizing: border-box;
 }
-
 
 code[class*='language-'],
 pre[class*='language-'] {
