@@ -12,10 +12,8 @@ const Photography = () => {
   });
 
   return (
-    <Container title="Photo">
-      <div className="gallery">
-        {photos2}
-      </div>
+    <Container title='Photography'>
+      <div className='gallery'>{photos2}</div>
     </Container>
   );
 };
